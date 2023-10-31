@@ -1,8 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  const { name } = req.query
+  const { name } = req
   return res.json({
-    message: `Hello ${name}!`,
+    message: `Hello ${name.name}!`,
   })
 }
